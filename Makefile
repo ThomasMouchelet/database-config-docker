@@ -4,10 +4,6 @@ up: ## Up docker-compose.yml file
 
 .PHONY: down
 down: ## Down docker-compose.yml file
-	docker-compose down
-
-.PHONY: down
-down: ## Down docker-compose.yml file
 	docker-compose down --remove-orphans
 
 .PHONY: reset
