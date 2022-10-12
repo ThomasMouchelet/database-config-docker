@@ -8,3 +8,13 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoroot
       MONGO_INITDB_ROOT_PASSWORD: mongoroot
+  docker_mysql:
+    image: 'mysql:latest'
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: dockermysql
+      MYSQL_DATABASE: dbmysql
+      MYSQL_USER: dockermysql
+      MYSQL_PASSWORD: dockermysql
+    ports:
+      - 3306:3306
