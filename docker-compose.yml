@@ -3,7 +3,6 @@ services:
   docker_postgres:
     container_name: docker_postgres
     image: postgres
-    restart: always
     ports:
       - 5432:5432
     environment:
