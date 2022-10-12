@@ -1,5 +1,15 @@
 version: '3.1'
 services:
+  docker_postgres:
+    container_name: docker_postgres
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: postgres
   docker_mongo:
     container_name: docker_mongo
     image: mongo:latest
