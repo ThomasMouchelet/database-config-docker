@@ -25,3 +25,10 @@ services:
       - 8080:80
     environment:
       PMA_HOST: docker_mysql
+  adminer:
+    image: adminer
+    container_name: adminer
+    environment:
+      ADMINER_DESIGN: pepa-linha
+    ports:
+      - 8082:8080
